@@ -59,13 +59,14 @@ double complex_t()
 //romberg算法
 void romberg()
 {
-	double ans[10][4] = { 0 };
-	double a, b, e, h, T2, T1, S2, S1, C2, C1=0, R2, R1=0;
-	int k;
-	double x,s;
-	int count = 0;
-	//计数器
-	int Tcount = 0, Scount = 1, Ccount = 2, Rcount = 3;
+	double ans[10][4] = { 0 };//存储龙贝格表
+	double a, b, e, h, T2, T1, S2, S1, C2, C1=0, R2, R1=0;//下限 上限 误差 范围 梯形值T1 T2 辛普森值 S1 S2 
+	                                                     //科特斯值 C1 C2 龙贝格值 R1 R2
+	int k; //变量转换
+	double x,s;//x数值 s 求和数值
+	int count = 0;//计数器
+	
+	int Tcount = 0, Scount = 1, Ccount = 2, Rcount = 3; //三个计数器 ，用来存储到数组对应位置
 
 	cout << "========龙贝格算法==========" << endl;
 	cout << "输入 下限 上限 误差" << endl;
